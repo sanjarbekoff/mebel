@@ -86,4 +86,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded",()=>{let timeLeft=119;const timerElement=document.querySelector(".timer");if(!timerElement)return;const updateTimer=()=>{if(timeLeft<=0){clearInterval(intervalId);return}timeLeft--;const minutes=String(Math.floor(timeLeft/60)).padStart(2,"0");const seconds=String(timeLeft%60).padStart(2,"0");timerElement.textContent=`${minutes}:${seconds}`};const intervalId=setInterval(updateTimer,1000);updateTimer()})
+document.addEventListener("DOMContentLoaded",()=>{let timeLeft=119;const timerElement=document.querySelector(".timer");if(!timerElement)return;const updateTimer=()=>{if(timeLeft<=0){clearInterval(intervalId);return}
+timeLeft--;const minutes=String(Math.floor(timeLeft/60)).padStart(2,"0");const seconds=String(timeLeft%60).padStart(2,"0");timerElement.textContent=`${minutes}:${seconds}`};const intervalId=setInterval(updateTimer,1000);updateTimer()})
