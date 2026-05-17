@@ -199,7 +199,6 @@ function setupPhoneFormatter({
   countries,
   formatMap,
 }) {
-  // required elements
   if (
     !phoneInput ||
     !selectedCountryBtn ||
@@ -333,7 +332,6 @@ function setupPhoneFormatter({
     phoneInput.value = cfg.formatDigits(digits);
   };
 
-  // toggle dropdown
   function toggle(ev) {
     ev.preventDefault();
     ev.stopPropagation();
@@ -361,7 +359,6 @@ function setupPhoneFormatter({
 
   phoneInput.addEventListener("change", (ev) => applyValue(ev.target.value));
 
-  // init
   renderSelected();
   const cfg = getConfig(currentCode);
   phoneInput.placeholder = cfg.placeholder;

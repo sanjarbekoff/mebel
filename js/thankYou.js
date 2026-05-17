@@ -6,8 +6,6 @@ async function sendFormData() {
 
   const formDataObj = JSON.parse(formDataRaw);
 
-
-  // Prepare FormData for API
   const formData = new FormData();
   formData.append("sheetName", "Lead");
   formData.append("Ism", formDataObj.Ism);
@@ -22,7 +20,6 @@ async function sendFormData() {
         body: formData,
       }
     );
-    
     
     if (response.ok) {
       localStorage.removeItem("formData");
